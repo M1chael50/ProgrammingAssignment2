@@ -19,7 +19,10 @@
 ##----------------------------------------------
 
 ## makeCacheMatrix A function to hold a matrix it's inverse and the functions to get and set them
-
+## set sets a matrix and clears any old inversed matrix
+## get gets the stored matrix
+## setinverse sets the inverse matrix
+## getinverse gets the stored matrix
 makeCacheMatrix <- function(x = matrix()) {
         inverseMatrix <- NULL
         
@@ -47,6 +50,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## A function to use the makeCacheMatrix object to return an inverse of a matrix
 ## from the cache if privously calculated or by a call to solve() if not.
 
+## use call and pass in a makeCacheMatrix object 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         # try and get the cached inversed matrix
